@@ -1,4 +1,4 @@
-# MidiMaster
+# MidiMaestro
 
 Set up the virtual environment with
 ```
