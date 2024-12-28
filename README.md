@@ -9,3 +9,7 @@ deactivate
 ```
 
 You can either leave the virtual environment active, or run scripts with `./venv/bin/python ...`
+
+====
+
+After installing new python modules with `pip install ...` save these to `requirements.txt` with `pip freeze > requirements.txt`
