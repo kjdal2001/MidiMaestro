@@ -1,5 +1,10 @@
 # MidiMaestro
 
+MidiMaestro requires python3 and libsound to be installed.  Install with
+```
+sudo apt-get install -y python3-dev libasound2-dev
+```
+
 Set up the virtual environment with
 ```
 python3 -m venv venv
