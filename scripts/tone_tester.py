@@ -2,13 +2,14 @@ import numpy as np
 import sounddevice as sd
 
 from MidiMaestro.envelope import Envelope
+from MidiMaestro.tone import Tone
 
 # Generate a simple tone
 fs = 44100  # Sampling rate
-# frequency = 500  # Hz
-# duration = 1  # seconds
-# time = np.linspace(0, duration, int(fs * duration), endpoint=False)
-# audio_signal = 1 * np.sin(2 * np.pi * frequency * time)
+frequency = 440  # Hz
+duration = 1  # seconds
+time = np.linspace(0, duration, int(fs * duration), endpoint=False)
+audio_signal = 1 * np.sin(2 * np.pi * frequency * time)
 
 # audio_signal2 = 0.5 * np.sin(2 * np.pi * frequency*2 * time)
 
@@ -19,8 +20,9 @@ fs = 44100  # Sampling rate
 # fade = np.linspace(1, 0, int(fs * duration), endpoint=False)
 
 ###### testing envelope
-e = Envelope(10, 10, 0.75, 1000, 500)
-audio_signal = e.apply(440)
+e = Envelope(100, 100, 0.5, 5000, 500)
+t = Tone(440, [1, 0.7, 0.5, 0.6, 0.5, 0.4, 0.3, 0.2, 0.15, 0.1])
+audio_signal = t.build_waveform(e)
 
 # Send signal to speakers
 sd.play( (audio_signal) , samplerate=fs)

@@ -25,8 +25,3 @@ class Waveform:
 
         sd.play(audio_signal, samplerate=fs)
 
-# def build(frequency, duration):
-#     time = np.linspace(0, duration, int(fs * duration), endpoint=False)
-#     audio_signal = 0.5 * np.sin(2 * np.pi * frequency * time)
-
-#     sd.play( (audio_signal) , samplerate=fs)
