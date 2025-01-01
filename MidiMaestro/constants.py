@@ -1,1 +1,1 @@
-sample_rate = 44100
+samplerate = 44100
