@@ -2,6 +2,7 @@ import numpy as np
 from pynput import keyboard
 import sounddevice as sd
 import time
+import sys
 
 import MidiMaestro.constants as constants
 from MidiMaestro.envelope import Envelope
@@ -10,8 +11,8 @@ from MidiMaestro.tone import Tone
 start_idx = 0
 buffer = np.array([])
 
-e = Envelope(100, 50, 0.25, 2000, 500)
-t = Tone(440, [1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], e)
+e = Envelope(100, 50, 0.25, 2000, 50)
+t = Tone(440, [1, 0.5, 0.3], e)
 # audio_signal = t.build_waveform(e)
 
 
